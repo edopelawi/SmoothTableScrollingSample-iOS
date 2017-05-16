@@ -12,6 +12,8 @@
 		8D85E88E1ECB4B0400775638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E88C1ECB4B0400775638 /* LaunchScreen.storyboard */; };
 		8D85E89A1ECB4C8200775638 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E8981ECB4C8200775638 /* MenuViewController.swift */; };
 		8D85E89B1ECB4C8200775638 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E8991ECB4C8200775638 /* MenuViewController.xib */; };
+		8D85E89E1ECB513E00775638 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E89C1ECB513E00775638 /* SimpleTableViewController.swift */; };
+		8D85E89F1ECB513E00775638 /* SimpleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E89D1ECB513E00775638 /* SimpleTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8D85E88F1ECB4B0400775638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D85E8981ECB4C8200775638 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8D85E8991ECB4C8200775638 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		8D85E89C1ECB513E00775638 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
+		8D85E89D1ECB513E00775638 /* SimpleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 			children = (
 				8D85E8981ECB4C8200775638 /* MenuViewController.swift */,
 				8D85E8991ECB4C8200775638 /* MenuViewController.xib */,
+				8D85E89C1ECB513E00775638 /* SimpleTableViewController.swift */,
+				8D85E89D1ECB513E00775638 /* SimpleTableViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -135,6 +141,7 @@
 				8D85E88E1ECB4B0400775638 /* LaunchScreen.storyboard in Resources */,
 				8D85E89B1ECB4C8200775638 /* MenuViewController.xib in Resources */,
 				8D85E88B1ECB4B0400775638 /* Assets.xcassets in Resources */,
+				8D85E89F1ECB513E00775638 /* SimpleTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D85E89E1ECB513E00775638 /* SimpleTableViewController.swift in Sources */,
 				8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */,
 				8D85E89A1ECB4C8200775638 /* MenuViewController.swift in Sources */,
 			);
