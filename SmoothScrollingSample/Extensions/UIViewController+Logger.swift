@@ -28,7 +28,7 @@ final class Logger {
 
 extension UIViewController {
 	
-	func log(function: Selector) {
-		Logger.shared.log("\(function)")
+	func log(function: Selector, additionalInfo: String = "") {
+		Logger.shared.log("\(function) \(additionalInfo)")
 	}
 }
