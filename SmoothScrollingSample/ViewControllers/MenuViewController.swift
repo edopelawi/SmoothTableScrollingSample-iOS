@@ -17,7 +17,9 @@ final class MenuViewController: UIViewController {
 	
 	@IBAction fileprivate func navigateToSimpleTableSample(_ sender: Any) {
 		
-		// TODO: Add navigation code here later.
+		let viewController = SimpleTableViewController()
+		
+		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 
 }
