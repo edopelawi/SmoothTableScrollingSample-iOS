@@ -29,7 +29,7 @@ final class SimpleTableViewController: UIViewController {
 	
 	private func populateTableData() {
 		
-		let rawData: [Int] = Array(1...20)
+		let rawData: [Int] = Array(0...9)
 		tableData = rawData.map { "\($0)" }
 	}
 	
@@ -64,5 +64,22 @@ extension SimpleTableViewController: UITableViewDataSource {
 		
 		return simpleCell
 	}
+	
+}
+
+extension SimpleTableViewController: UITableViewDelegate {
+	
+	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		
+		self.log(function: #function, additionalInfo: "for \(indexPath)")
+		return CGFloat(44)
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		
+		self.log(function: #function, additionalInfo: "for \(indexPath)")
+		return CGFloat(44)
+	}
+	
 	
 }
