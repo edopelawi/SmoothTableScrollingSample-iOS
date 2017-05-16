@@ -23,19 +23,20 @@ final class SimpleTableViewController: UIViewController {
 extension SimpleTableViewController: UITableViewDataSource {
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
-		print(#function)
+
+		self.log(function: #function)
 		return 1
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
-		print(#function)
+		self.log(function: #function)
 		return 0
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
-		print(#function)
+		self.log(function: #function)
 		
 		// TODO: Add proper dequeing code later.
 		return UITableViewCell()
