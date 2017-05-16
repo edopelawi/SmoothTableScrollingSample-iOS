@@ -18,7 +18,24 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vw2-ic-LhI">
+                    <rect key="frame" x="10" y="317" width="355" height="33"/>
+                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <state key="normal" title="Simple Table View"/>
+                    <connections>
+                        <action selector="navigateToSimpleTableSample:" destination="-1" eventType="touchUpInside" id="Ql0-10-3BP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Vw2-ic-LhI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="9pM-TZ-92U"/>
+                <constraint firstItem="Vw2-ic-LhI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Nxo-Gv-x0t"/>
+                <constraint firstAttribute="trailing" secondItem="Vw2-ic-LhI" secondAttribute="trailing" constant="10" id="f31-du-LoA"/>
+            </constraints>
+            <point key="canvasLocation" x="86.5" y="54.5"/>
         </view>
     </objects>
 </document>

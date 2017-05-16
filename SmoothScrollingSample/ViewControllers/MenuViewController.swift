@@ -8,12 +8,16 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+final class MenuViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }    
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		self.navigationController?.isNavigationBarHidden = true
+	}
+	
+	@IBAction fileprivate func navigateToSimpleTableSample(_ sender: Any) {
+		
+		// TODO: Add navigation code here later.
+	}
 
 }
