@@ -17,6 +17,7 @@
 		8D85E8A21ECB596400775638 /* UIViewController+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E8A11ECB596400775638 /* UIViewController+Logger.swift */; };
 		8D85E8A61ECB5C6800775638 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E8A41ECB5C6800775638 /* SimpleTableViewCell.swift */; };
 		8D85E8A71ECB5C6800775638 /* SimpleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E8A51ECB5C6800775638 /* SimpleTableViewCell.xib */; };
+		8D85E8A91ECB5FB000775638 /* UITableViewCell+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E8A81ECB5FB000775638 /* UITableViewCell+Nib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8D85E8A11ECB596400775638 /* UIViewController+Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Logger.swift"; sourceTree = "<group>"; };
 		8D85E8A41ECB5C6800775638 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		8D85E8A51ECB5C6800775638 /* SimpleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableViewCell.xib; sourceTree = "<group>"; };
+		8D85E8A81ECB5FB000775638 /* UITableViewCell+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Nib.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				8D85E8A11ECB596400775638 /* UIViewController+Logger.swift */,
+				8D85E8A81ECB5FB000775638 /* UITableViewCell+Nib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */,
 				8D85E8A61ECB5C6800775638 /* SimpleTableViewCell.swift in Sources */,
 				8D85E89A1ECB4C8200775638 /* MenuViewController.swift in Sources */,
+				8D85E8A91ECB5FB000775638 /* UITableViewCell+Nib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
