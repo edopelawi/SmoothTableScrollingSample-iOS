@@ -14,6 +14,7 @@
 		8D85E89B1ECB4C8200775638 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E8991ECB4C8200775638 /* MenuViewController.xib */; };
 		8D85E89E1ECB513E00775638 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E89C1ECB513E00775638 /* SimpleTableViewController.swift */; };
 		8D85E89F1ECB513E00775638 /* SimpleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E89D1ECB513E00775638 /* SimpleTableViewController.xib */; };
+		8D85E8A21ECB596400775638 /* UIViewController+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E8A11ECB596400775638 /* UIViewController+Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8D85E8991ECB4C8200775638 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		8D85E89C1ECB513E00775638 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		8D85E89D1ECB513E00775638 /* SimpleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableViewController.xib; sourceTree = "<group>"; };
+		8D85E8A11ECB596400775638 /* UIViewController+Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Logger.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				8D85E8961ECB4C5600775638 /* ViewControllers */,
+				8D85E8A01ECB593E00775638 /* Extensions */,
 				8D85E8831ECB4B0400775638 /* AppDelegate.swift */,
 				8D85E88A1ECB4B0400775638 /* Assets.xcassets */,
 				8D85E88C1ECB4B0400775638 /* LaunchScreen.storyboard */,
@@ -76,6 +79,14 @@
 				8D85E89D1ECB513E00775638 /* SimpleTableViewController.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8D85E8A01ECB593E00775638 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8D85E8A11ECB596400775638 /* UIViewController+Logger.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D85E8A21ECB596400775638 /* UIViewController+Logger.swift in Sources */,
 				8D85E89E1ECB513E00775638 /* SimpleTableViewController.swift in Sources */,
 				8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */,
 				8D85E89A1ECB4C8200775638 /* MenuViewController.swift in Sources */,
