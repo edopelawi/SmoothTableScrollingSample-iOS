@@ -51,7 +51,7 @@ extension SimpleTableViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
-		self.log(function: #function)
+		self.log(function: #function, additionalInfo: "for \(indexPath)" )
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.identifier, for: indexPath)
 		
