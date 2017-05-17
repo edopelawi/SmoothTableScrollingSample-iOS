@@ -46,7 +46,7 @@ final class SocialMediaTimelineItemFactory {
 			),
 			SocialMediaUser(
 				name: "Hulk",
-				avatarURL: URL(string: "http://www.stickees.com/files/avatars/comics-characters/1736-hulk-happy.png")
+				avatarURL: URL(string: "http://68.media.tumblr.com/avatar_1842304e4726_128.png")
 			),
 			SocialMediaUser(
 				name: "Black Widow",
@@ -63,13 +63,13 @@ final class SocialMediaTimelineItemFactory {
 
 			"There was an idea... to bring together a group of remarkable people. To make them work together when we needed them to, to fight the battles that... we never could. Phil Coulson died still believing in that idea. In heroes.",
 			
-			"The Avengers. It's what we call ourselves, sort of like a team. 'Earth's Mightiest Heroes' type of thing.",
+			"We have a Hulk.",
 			
 			"I understod that reference.",
 			
 			"Have care of how you speak. Loki is beyond reason but he is of Asgard. And he is my brother.\n\n\n\n\n...He's adopted.",
 			
-			"That's my secret Cap, I'm always angry.",
+			"HULK SMASH!!!",
 			
 			"This is just like Budapest, huh?",
 			
