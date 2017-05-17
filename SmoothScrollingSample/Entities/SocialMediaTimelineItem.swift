@@ -10,7 +10,7 @@ import Foundation
 
 struct SociaMediaTimeLineItem {
 	
-	// TODO: Add user later.
+	let user: SocialMediaUser
 	
 	let text: String?
 	let imageURL: URL?
