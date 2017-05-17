@@ -22,9 +22,7 @@ final class SocialMediaTextCell: UITableViewCell {
 	
 	func configure(viewModel: SocialMediaCellViewModel) {
 		
-		// TODO: Add code for loading avatar later.
-		
-		avatarImageView.image = viewModel.userAvatar
+		avatarImageView.image = viewModel.getUserAvatar()
 		nameLabel.text = viewModel.userName
 		contentLabel.text = viewModel.contentText		
 	}
