@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1938771ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1938751ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift */; };
+		8D1938781ECC9F28007E3C41 /* SocialMediaTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1938761ECC9F28007E3C41 /* SocialMediaTimelineViewController.xib */; };
 		8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E8831ECB4B0400775638 /* AppDelegate.swift */; };
 		8D85E88B1ECB4B0400775638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E88A1ECB4B0400775638 /* Assets.xcassets */; };
 		8D85E88E1ECB4B0400775638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E88C1ECB4B0400775638 /* LaunchScreen.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D1938751ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaTimelineViewController.swift; sourceTree = "<group>"; };
+		8D1938761ECC9F28007E3C41 /* SocialMediaTimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialMediaTimelineViewController.xib; sourceTree = "<group>"; };
 		8D85E8801ECB4B0400775638 /* SmoothScrollingSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmoothScrollingSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D85E8831ECB4B0400775638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D85E88A1ECB4B0400775638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				8D85E8991ECB4C8200775638 /* MenuViewController.xib */,
 				8D85E89C1ECB513E00775638 /* SimpleTableViewController.swift */,
 				8D85E89D1ECB513E00775638 /* SimpleTableViewController.xib */,
+				8D1938751ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift */,
+				8D1938761ECC9F28007E3C41 /* SocialMediaTimelineViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D85E88E1ECB4B0400775638 /* LaunchScreen.storyboard in Resources */,
+				8D1938781ECC9F28007E3C41 /* SocialMediaTimelineViewController.xib in Resources */,
 				8D85E8A71ECB5C6800775638 /* SimpleTableViewCell.xib in Resources */,
 				8D85E89B1ECB4C8200775638 /* MenuViewController.xib in Resources */,
 				8D85E88B1ECB4B0400775638 /* Assets.xcassets in Resources */,
@@ -187,6 +194,7 @@
 				8D85E8A61ECB5C6800775638 /* SimpleTableViewCell.swift in Sources */,
 				8D85E89A1ECB4C8200775638 /* MenuViewController.swift in Sources */,
 				8D85E8A91ECB5FB000775638 /* UITableViewCell+Nib.swift in Sources */,
+				8D1938771ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +352,7 @@
 				8D85E8941ECB4B0400775638 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
