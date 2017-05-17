@@ -8,9 +8,7 @@
 
 import UIKit
 
-final class SocialMediaCellViewModel {
-	
-	var userAvatar: UIImage?
+final class SocialMediaCellViewModel {		
 	
 	var userName: String {
 		return item.user.name
@@ -28,5 +26,17 @@ final class SocialMediaCellViewModel {
 		self.item = item
 	}
 	
-	// TODO: Add functionality to retrieve images later.
+	func getUserAvatar() -> UIImage? {
+		return getImage(for: item.user.avatarURL)
+	}
+	
+	private func getImage(for url: URL?) -> UIImage? {
+		
+		guard let validURL = url,
+			let data = try? Data(contentsOf: validURL) else {
+				return nil
+		}
+		
+		return UIImage(data: data)
+	}
 }
