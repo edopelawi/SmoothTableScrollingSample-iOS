@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8D1938771ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1938751ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift */; };
 		8D1938781ECC9F28007E3C41 /* SocialMediaTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1938761ECC9F28007E3C41 /* SocialMediaTimelineViewController.xib */; };
+		8D19387B1ECCA4E3007E3C41 /* SocialMediaTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1938791ECCA4E3007E3C41 /* SocialMediaTextCell.swift */; };
+		8D19387C1ECCA4E3007E3C41 /* SocialMediaTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D19387A1ECCA4E3007E3C41 /* SocialMediaTextCell.xib */; };
 		8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E8831ECB4B0400775638 /* AppDelegate.swift */; };
 		8D85E88B1ECB4B0400775638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E88A1ECB4B0400775638 /* Assets.xcassets */; };
 		8D85E88E1ECB4B0400775638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E88C1ECB4B0400775638 /* LaunchScreen.storyboard */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		8D1938751ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaTimelineViewController.swift; sourceTree = "<group>"; };
 		8D1938761ECC9F28007E3C41 /* SocialMediaTimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialMediaTimelineViewController.xib; sourceTree = "<group>"; };
+		8D1938791ECCA4E3007E3C41 /* SocialMediaTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaTextCell.swift; sourceTree = "<group>"; };
+		8D19387A1ECCA4E3007E3C41 /* SocialMediaTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialMediaTextCell.xib; sourceTree = "<group>"; };
 		8D85E8801ECB4B0400775638 /* SmoothScrollingSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmoothScrollingSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D85E8831ECB4B0400775638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D85E88A1ECB4B0400775638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			children = (
 				8D85E8A41ECB5C6800775638 /* SimpleTableViewCell.swift */,
 				8D85E8A51ECB5C6800775638 /* SimpleTableViewCell.xib */,
+				8D1938791ECCA4E3007E3C41 /* SocialMediaTextCell.swift */,
+				8D19387A1ECCA4E3007E3C41 /* SocialMediaTextCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D85E88E1ECB4B0400775638 /* LaunchScreen.storyboard in Resources */,
+				8D19387C1ECCA4E3007E3C41 /* SocialMediaTextCell.xib in Resources */,
 				8D1938781ECC9F28007E3C41 /* SocialMediaTimelineViewController.xib in Resources */,
 				8D85E8A71ECB5C6800775638 /* SimpleTableViewCell.xib in Resources */,
 				8D85E89B1ECB4C8200775638 /* MenuViewController.xib in Resources */,
@@ -192,6 +199,7 @@
 				8D85E89E1ECB513E00775638 /* SimpleTableViewController.swift in Sources */,
 				8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */,
 				8D85E8A61ECB5C6800775638 /* SimpleTableViewCell.swift in Sources */,
+				8D19387B1ECCA4E3007E3C41 /* SocialMediaTextCell.swift in Sources */,
 				8D85E89A1ECB4C8200775638 /* MenuViewController.swift in Sources */,
 				8D85E8A91ECB5FB000775638 /* UITableViewCell+Nib.swift in Sources */,
 				8D1938771ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift in Sources */,
