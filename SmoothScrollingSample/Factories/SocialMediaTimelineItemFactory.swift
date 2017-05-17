@@ -55,7 +55,7 @@ final class SocialMediaTimelineItemFactory {
 			"You and I remember Budapest very differently."
 		]
 		
-		items = users.enumerated().map { (index: Int, user: SocialMediaUser) -> SocialMediaTimelineItem in
+		let timelineItems = users.enumerated().map { (index: Int, user: SocialMediaUser) -> SocialMediaTimelineItem in
 			
 			// TODO: Add image URLs later.
 			return SocialMediaTimelineItem(
@@ -64,6 +64,10 @@ final class SocialMediaTimelineItemFactory {
 				imageURL: nil
 			)
 		}
+		
+		let repeatedTimelineItems: [[SocialMediaTimelineItem]] = Array(repeating: timelineItems, count: 100)
+		
+		self.items = repeatedTimelineItems.flatMap { $0 }
 	}
 	
 }
