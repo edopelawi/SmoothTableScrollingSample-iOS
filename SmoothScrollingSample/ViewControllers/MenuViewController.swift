@@ -22,4 +22,7 @@ final class MenuViewController: UIViewController {
 		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 
+	@IBAction func navigateToSocialMediaTimeline(_ sender: Any) {
+		// TODO: Implement the navigation later.
+	}
 }
