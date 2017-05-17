@@ -28,13 +28,34 @@ final class SocialMediaTimelineItemFactory {
 		// TODO: Pass avatar URLs later.
 		
 		let users: [SocialMediaUser] = [
-			SocialMediaUser(name: "Nick Fury", avatarURL: nil),
-			SocialMediaUser(name: "Iron Man", avatarURL: nil),
-			SocialMediaUser(name: "Captain America", avatarURL: nil),
-			SocialMediaUser(name: "Thor Odinson", avatarURL: nil),
-			SocialMediaUser(name: "Hulk", avatarURL: nil),
-			SocialMediaUser(name: "Black Widow", avatarURL: nil),
-			SocialMediaUser(name: "Hawkeye", avatarURL: nil)
+			SocialMediaUser(
+				name: "Nick Fury",
+				avatarURL: URL(string: "https://68.media.tumblr.com/avatar_af2fd2579390_128.png")
+			),
+			SocialMediaUser(
+				name: "Iron Man",
+				avatarURL: URL(string: "https://cdn4.iconfinder.com/data/icons/superheroes/512/ironman-128.png")
+			),
+			SocialMediaUser(
+				name: "Captain America",
+				avatarURL: URL(string: "https://68.media.tumblr.com/avatar_f315e8aa100c_128.png")
+			),
+			SocialMediaUser(
+				name: "Thor Odinson",
+				avatarURL: URL(string: "https://68.media.tumblr.com/avatar_63e6969c7be6_128.png")
+			),
+			SocialMediaUser(
+				name: "Hulk",
+				avatarURL: URL(string: "http://www.stickees.com/files/avatars/comics-characters/1736-hulk-happy.png")
+			),
+			SocialMediaUser(
+				name: "Black Widow",
+				avatarURL: URL(string: "https://68.media.tumblr.com/avatar_a54cf132f9a2_128.png")
+			),
+			SocialMediaUser(
+				name: "Hawkeye",
+				avatarURL: URL(string: "https://68.media.tumblr.com/avatar_7b43e7170bc6_128.png")
+			)
 		]
 		
 		
