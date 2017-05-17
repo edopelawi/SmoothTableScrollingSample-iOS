@@ -19,5 +19,14 @@ final class SocialMediaTextCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+	
+	func configure(viewModel: SocialMediaCellViewModel) {
+		
+		// TODO: Add code for loading avatar later.
+		
+		avatarImageView.image = viewModel.userAvatar
+		nameLabel.text = viewModel.userName
+		contentLabel.text = viewModel.contentText		
+	}
     
 }
