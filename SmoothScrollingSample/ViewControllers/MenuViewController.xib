@@ -37,7 +37,6 @@
                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                             <state key="normal" title="Social Media Timeline"/>
                             <connections>
-                                <action selector="navigateToSimpleTableSample:" destination="-1" eventType="touchUpInside" id="DVs-x4-b0t"/>
                                 <action selector="navigateToSocialMediaTimeline:" destination="-1" eventType="touchUpInside" id="zdL-1Q-eXN"/>
                             </connections>
                         </button>
