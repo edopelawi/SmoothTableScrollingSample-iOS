@@ -10,6 +10,11 @@ import UIKit
 
 final class MenuViewController: UIViewController {
 
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		title = "Menu"
+	}
+	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		self.navigationController?.isNavigationBarHidden = true
