@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SocialMediaTextCell: UITableViewCell, SocialMediaCell {
+final class SocialMediaTextCell: UITableViewCell {
 
 	static let identifier = "SocialMediaTextCell"
 	
@@ -18,17 +18,7 @@ final class SocialMediaTextCell: UITableViewCell, SocialMediaCell {
 	
 	fileprivate var viewModel: SocialMediaCellViewModel?
 	
-	func configure(viewModel: SocialMediaCellViewModel) {
-		
-		self.viewModel = viewModel
-		
-		nameLabel.text = viewModel.userName
-		contentLabel.text = viewModel.contentText
-		
-		fetchUserAvatar()
-	}
-	
-	func fetchUserAvatar() {
+	fileprivate func fetchUserAvatar() {
 		
 		if let validAvatar = viewModel?.userAvatar {
 			avatarImageView.image = validAvatar
@@ -42,4 +32,51 @@ final class SocialMediaTextCell: UITableViewCell, SocialMediaCell {
 		}
 	}
     
+}
+
+extension SocialMediaTextCell: SocialMediaCell {
+
+	
+	static func height(for viewModel: SocialMediaCellViewModel) -> CGFloat {
+		
+		let topPadding = CGFloat(16)
+		let bottomPadding = CGFloat(8)
+		
+		let nameLabelHeight = CGFloat(22)
+		let nameLabelBottomPadding = CGFloat(8)
+		
+		let contentLabelHeight = SocialMediaTextCell.contentLabelHeight(for: viewModel.contentText)
+		
+		return topPadding + bottomPadding +
+			nameLabelHeight + nameLabelBottomPadding +
+			contentLabelHeight
+	}
+	
+	fileprivate static func contentLabelHeight(for text: String?) -> CGFloat {
+		
+		guard let validText = text else {
+			return CGFloat(0)
+		}
+		
+		let font = UIFont.preferredFont(forTextStyle: .body)
+		let screenWidth = UIScreen.main.bounds.width
+		let contentLabelHorizontalPadding = CGFloat(8 + 40 + 8 + 8)
+		
+		let contentLabelWidth = screenWidth - contentLabelHorizontalPadding
+		
+		return validText.displayHeight(
+			width: contentLabelWidth,
+			font: font
+		)
+	}
+	
+	func configure(viewModel: SocialMediaCellViewModel) {
+		
+		self.viewModel = viewModel
+		
+		nameLabel.text = viewModel.userName
+		contentLabel.text = viewModel.contentText
+		
+		fetchUserAvatar()
+	}
 }
