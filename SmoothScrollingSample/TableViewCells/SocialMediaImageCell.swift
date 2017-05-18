@@ -30,7 +30,7 @@ final class SocialMediaImageCell: UITableViewCell {
 	}
 	
 	fileprivate func fetchUserAvatar() {
-	
+		
 		if let validAvatar = viewModel?.userAvatar {
 			avatarImageView.image = validAvatar
 			return
@@ -56,6 +56,23 @@ final class SocialMediaImageCell: UITableViewCell {
 			}
 		}
 	}
+	
+	fileprivate func configureForCurrentViewModel() {
+		
+		let className = String(describing: type(of: self))
+		Logger.shared.log("\(className): \(#function)")
+		
+		guard let viewModel = viewModel else {
+			return
+		}
+		
+		nameLabel.text = viewModel.userName
+		contentLabel.text = viewModel.contentText
+		
+		fetchUserAvatar()
+		fetchContentImage()
+	}
+	
 	
 	private func resetState() {
 
@@ -114,11 +131,17 @@ extension SocialMediaImageCell: SocialMediaCell {
 		
 		self.viewModel = viewModel
 		
-		nameLabel.text = viewModel.userName
-		contentLabel.text = viewModel.contentText
+		let delayTime = DispatchTime.now() + 0.5
 		
-		fetchUserAvatar()
-		fetchContentImage()
+		DispatchQueue.main.asyncAfter(deadline: delayTime) { [weak self] in
+			
+			guard let currentViewModel = self?.viewModel,
+				currentViewModel === viewModel else {
+					return
+			}
+			
+			self?.configureForCurrentViewModel()
+		}
 	}
 	
 }

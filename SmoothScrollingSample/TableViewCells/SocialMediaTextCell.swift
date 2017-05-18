@@ -27,6 +27,21 @@ final class SocialMediaTextCell: UITableViewCell {
 		resetState()
 	}
 	
+	fileprivate func configureForCurrentViewModel() {
+		
+		let className = String(describing: type(of: self))
+		Logger.shared.log("\(className): \(#function)")
+		
+		guard let viewModel = viewModel else {
+			return
+		}
+		
+		nameLabel.text = viewModel.userName
+		contentLabel.text = viewModel.contentText
+		
+		fetchUserAvatar()
+	}
+	
 	fileprivate func fetchUserAvatar() {
 		
 		if let validAvatar = viewModel?.userAvatar {
@@ -92,9 +107,16 @@ extension SocialMediaTextCell: SocialMediaCell {
 		
 		self.viewModel = viewModel
 		
-		nameLabel.text = viewModel.userName
-		contentLabel.text = viewModel.contentText
+		let delayTime = DispatchTime.now() + 0.5
 		
-		fetchUserAvatar()
+		DispatchQueue.main.asyncAfter(deadline: delayTime) { [weak self] in
+			
+			guard let currentViewModel = self?.viewModel,
+				currentViewModel === viewModel else {
+					return
+			}
+			
+			self?.configureForCurrentViewModel()
+		}
 	}
 }
