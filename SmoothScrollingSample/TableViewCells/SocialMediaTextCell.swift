@@ -16,15 +16,28 @@ final class SocialMediaTextCell: UITableViewCell {
 	@IBOutlet fileprivate weak var nameLabel: UILabel!
 	@IBOutlet fileprivate weak var contentLabel: UILabel!
 	
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+	fileprivate var viewModel: SocialMediaCellViewModel?
 	
 	func configure(viewModel: SocialMediaCellViewModel) {
 		
-		avatarImageView.image = viewModel.getUserAvatar()
+		self.viewModel = viewModel
+		
 		nameLabel.text = viewModel.userName
-		contentLabel.text = viewModel.contentText		
+		contentLabel.text = viewModel.contentText
+		
+		fetchUserAvatar()
+	}
+	
+	func fetchUserAvatar() {
+		
+		if let validAvatar = viewModel?.userAvatar {
+			avatarImageView.image = validAvatar
+			return
+		}
+		
+		viewModel?.fetchUserAvatar { [weak self] (userAvatar: UIImage?) in
+			self?.avatarImageView.image = userAvatar
+		}
 	}
     
 }
