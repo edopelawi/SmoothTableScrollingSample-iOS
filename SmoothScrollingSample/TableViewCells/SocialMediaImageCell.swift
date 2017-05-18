@@ -131,7 +131,7 @@ extension SocialMediaImageCell: SocialMediaCell {
 		
 		self.viewModel = viewModel
 		
-		let delayTime = DispatchTime.now() + 0.5
+		let delayTime = DispatchTime.now() + 0.2
 		
 		DispatchQueue.main.asyncAfter(deadline: delayTime) { [weak self] in
 			
