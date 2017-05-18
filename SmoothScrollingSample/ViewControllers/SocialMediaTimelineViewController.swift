@@ -19,6 +19,7 @@ final class SocialMediaTimelineViewController: BaseViewController {
 
         title = "Social Media"
 		
+		createRightBarButton()
 		configureTableView()
 		loadViewModels()
     }
@@ -30,6 +31,22 @@ final class SocialMediaTimelineViewController: BaseViewController {
 	}
 	
 	// MARK: - Private methods
+	
+	private func createRightBarButton() {
+		
+		self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+			title: "Top!",
+			style: .plain,
+			target: self,
+			action: #selector(SocialMediaTimelineViewController.scrollToTop)
+		)
+	}
+	
+	@objc private func scrollToTop() {
+
+		let topIndexPath = IndexPath(row: 0, section: 0)
+		tableView.scrollToRow(at: topIndexPath, at: .top, animated: true)
+	}
 	
 	private func configureTableView() {
 		
