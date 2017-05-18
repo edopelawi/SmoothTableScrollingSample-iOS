@@ -109,7 +109,15 @@ extension SocialMediaTimelineViewController: UITableViewDelegate {
 		
 		self.log(function: #function, additionalInfo: "with indexPath: \(indexPath)")
 		
-		return UITableViewAutomaticDimension
+		let viewModel = viewModels[indexPath.row]
+		
+		switch viewModel.contentType {
+		case .textOnly:
+			return SocialMediaTextCell.height(for: viewModel)
+			
+		case .textAndImage:
+			return SocialMediaImageCell.height(for: viewModel)
+		}		
 	}
 	
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
