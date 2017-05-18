@@ -20,6 +20,11 @@ final class SocialMediaImageCell: UITableViewCell {
 	
 	fileprivate var viewModel: SocialMediaCellViewModel?
 
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		resetState()
+	}
+	
 	override func prepareForReuse() {
 		super.prepareForReuse()
 		
@@ -31,13 +36,18 @@ final class SocialMediaImageCell: UITableViewCell {
 	
 	fileprivate func fetchUserAvatar() {
 		
+		let backgroundColor = self.contentView.backgroundColor
+		
 		if let validAvatar = viewModel?.userAvatar {
+			avatarImageView.backgroundColor = backgroundColor
 			avatarImageView.image = validAvatar
 			return
 		}
 		
 		viewModel?.fetchUserAvatar { [weak self] (userAvatar: UIImage?) in
 			DispatchQueue.main.async {
+				
+				self?.avatarImageView.backgroundColor = backgroundColor
 				self?.avatarImageView.image = userAvatar
 			}
 		}
@@ -45,13 +55,18 @@ final class SocialMediaImageCell: UITableViewCell {
 	
 	fileprivate func fetchContentImage() {
 		
+		let backgroundColor = self.contentView.backgroundColor
+		
 		if let validImage = viewModel?.contentImage {
 			contentImageView.image = validImage
+			contentImageView.backgroundColor = backgroundColor
 			return
 		}
 		
 		viewModel?.fetchContentImage() { [weak self] (contentImage: UIImage?) in
 			DispatchQueue.main.async {
+				
+				self?.contentImageView.backgroundColor = backgroundColor
 				self?.contentImageView.image = contentImage
 			}
 		}
@@ -67,22 +82,43 @@ final class SocialMediaImageCell: UITableViewCell {
 		}
 		
 		nameLabel.text = viewModel.userName
+		nameLabel.backgroundColor = self.contentView.backgroundColor
+		
 		contentLabel.text = viewModel.contentText
+		contentLabel.backgroundColor = self.contentView.backgroundColor
 		
 		fetchUserAvatar()
 		fetchContentImage()
 	}
 	
-	
 	private func resetState() {
 
 		viewModel = nil
 		
-		avatarImageView.image = nil
-		contentImageView.image = nil
+		let emptyStateBackgroundColor = UIColor(
+			red: 0,
+			green: 128.0 / 255.0,
+			blue: 1,
+			alpha: 1
+		)
 		
-		nameLabel.text = ""
-		contentLabel.text = ""
+		let imageViews: [UIImageView] = [
+			avatarImageView, contentImageView
+		]
+		
+		let labels: [UILabel] = [
+			nameLabel, contentLabel
+		]
+		
+		imageViews.forEach { imageView in
+			imageView.image = nil
+			imageView.backgroundColor = emptyStateBackgroundColor
+		}
+		
+		labels.forEach { label in
+			label.text = ""
+			label.backgroundColor = emptyStateBackgroundColor
+		}
 	}
 }
 
