@@ -8,11 +8,32 @@
 
 import UIKit
 
-final class MenuViewController: UIViewController {
+final class MenuViewController: BaseViewController {
 
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		title = "Menu"
+		
+		configureNavigationBar()
+	}
+	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		self.navigationController?.isNavigationBarHidden = true
+	}
+	
+	fileprivate func configureNavigationBar() {
+		guard let navigationBar = self.navigationController?.navigationBar else {
+			return
+		}
+		
+		navigationBar.barTintColor = self.view.backgroundColor
+		navigationBar.tintColor = UIColor.white
+		
+		navigationBar.titleTextAttributes = [
+			NSForegroundColorAttributeName: UIColor.white
+		]
 	}
 	
 	@IBAction fileprivate func navigateToSimpleTableSample(_ sender: Any) {
@@ -22,4 +43,10 @@ final class MenuViewController: UIViewController {
 		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 
+	@IBAction fileprivate func navigateToSocialMediaTimeline(_ sender: Any) {
+		
+		let viewController = SocialMediaTimelineViewController()
+		
+		self.navigationController?.pushViewController(viewController, animated: true)
+	}
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SimpleTableViewController: UIViewController {
+final class SimpleTableViewController: BaseViewController {
 
 	@IBOutlet fileprivate weak var tableView: UITableView?
 	
@@ -17,11 +17,19 @@ final class SimpleTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		title = "Simple Table View"
+		
 		registerTableCells()
 		populateTableData()
 		
 		tableView?.reloadData()
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		self.navigationController?.isNavigationBarHidden = false
+	}
 	
 	private func registerTableCells() {
 		tableView?.register(SimpleTableViewCell.nib(), forCellReuseIdentifier: SimpleTableViewCell.identifier)
