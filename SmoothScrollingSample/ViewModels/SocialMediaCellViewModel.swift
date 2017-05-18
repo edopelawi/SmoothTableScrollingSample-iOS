@@ -52,8 +52,9 @@ final class SocialMediaCellViewModel {
 			return
 		}
 		
-		userAvatar = getImage(for: item.imageURL)
-		completion(userAvatar)
+		// TODO: Replace this with asynchronous method for better performance later.
+		contentImage = getImage(for: item.imageURL)
+		completion(contentImage)
 	}
 	
 	func stopAllFetchTasks() {
