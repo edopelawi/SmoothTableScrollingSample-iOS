@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SimpleTableViewController: UIViewController {
+final class SimpleTableViewController: BaseViewController {
 
 	@IBOutlet fileprivate weak var tableView: UITableView?
 	

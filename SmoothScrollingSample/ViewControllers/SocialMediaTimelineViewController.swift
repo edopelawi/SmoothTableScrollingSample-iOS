@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SocialMediaTimelineViewController: UIViewController {
+final class SocialMediaTimelineViewController: BaseViewController {
 
 	@IBOutlet fileprivate weak var tableView: UITableView!
 	
