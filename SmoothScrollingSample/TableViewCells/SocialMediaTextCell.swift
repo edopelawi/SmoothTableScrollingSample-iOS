@@ -18,6 +18,11 @@ final class SocialMediaTextCell: UITableViewCell {
 	
 	fileprivate var viewModel: SocialMediaCellViewModel?
 	
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		resetState()
+	}
+	
 	override func prepareForReuse() {
 		super.prepareForReuse()
 		
@@ -36,21 +41,32 @@ final class SocialMediaTextCell: UITableViewCell {
 			return
 		}
 		
+		let backgroundColor = self.contentView.backgroundColor
+		
 		nameLabel.text = viewModel.userName
+		nameLabel.backgroundColor = backgroundColor
+		
 		contentLabel.text = viewModel.contentText
+		contentLabel.backgroundColor = backgroundColor
 		
 		fetchUserAvatar()
 	}
 	
 	fileprivate func fetchUserAvatar() {
 		
+		let backgroundColor = self.contentView.backgroundColor
+		
 		if let validAvatar = viewModel?.userAvatar {
+			
 			avatarImageView.image = validAvatar
+			avatarImageView.backgroundColor = backgroundColor
 			return
 		}
 		
 		viewModel?.fetchUserAvatar { [weak self] (userAvatar: UIImage?) in
 			DispatchQueue.main.async {
+				
+				self?.avatarImageView.backgroundColor = backgroundColor
 				self?.avatarImageView.image = userAvatar
 			}
 		}
@@ -60,10 +76,24 @@ final class SocialMediaTextCell: UITableViewCell {
 		
 		viewModel = nil
 		
-		avatarImageView.image = nil
+		let emptyStateBackgroundColor = UIColor(
+			red: 0,
+			green: 128.0 / 255.0,
+			blue: 1,
+			alpha: 1
+		)
 		
-		nameLabel.text = ""
-		contentLabel.text = ""
+		avatarImageView.image = nil
+		avatarImageView.backgroundColor = emptyStateBackgroundColor
+		
+		let labels: [UILabel] = [
+			nameLabel, contentLabel
+		]
+		
+		labels.forEach { label in
+			label.text = ""
+			label.backgroundColor = emptyStateBackgroundColor
+		}
 	}
 }
 
