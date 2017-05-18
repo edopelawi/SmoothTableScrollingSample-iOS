@@ -33,9 +33,6 @@ final class SocialMediaTimelineViewController: BaseViewController {
 	
 	private func configureTableView() {
 		
-		tableView.estimatedRowHeight = CGFloat(100)
-		tableView.rowHeight = UITableViewAutomaticDimension
-		
 		tableView.register(SocialMediaTextCell.nib(), forCellReuseIdentifier: SocialMediaTextCell.identifier)
 	}
 	
@@ -84,5 +81,22 @@ extension SocialMediaTimelineViewController: UITableViewDataSource {
 		return textCell
 	}
 			
+}
+
+extension SocialMediaTimelineViewController: UITableViewDelegate {
+
+	
+	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		
+		self.log(function: #function, additionalInfo: "with indexPath: \(indexPath)")
+		return 100
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		
+		self.log(function: #function, additionalInfo: "with indexPath: \(indexPath)")
+		
+		return UITableViewAutomaticDimension
+	}
 }
 
