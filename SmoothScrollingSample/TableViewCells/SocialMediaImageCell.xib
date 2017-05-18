@@ -42,7 +42,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OII-da-SjH" userLabel="Content Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OII-da-SjH" userLabel="Content Image View">
                                 <rect key="frame" x="48" y="69.5" width="256" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="BSh-ID-KpU"/>
@@ -73,6 +73,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="2dW-4b-pes" secondAttribute="bottom" id="8h8-lc-zqj"/>
                     <constraint firstItem="dBO-9q-6dH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KMc-NU-NiF"/>
@@ -83,6 +84,7 @@
                     <constraint firstAttribute="trailing" secondItem="dBO-9q-6dH" secondAttribute="trailing" constant="8" id="zzq-Ce-jxW"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="avatarImageView" destination="pwg-h3-grg" id="Xq1-5O-w3d"/>
                 <outlet property="contentImageView" destination="OII-da-SjH" id="ytr-eD-nDp"/>
