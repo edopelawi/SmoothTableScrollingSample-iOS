@@ -19,6 +19,7 @@
 		8D1EBBB91ECD2D7500B037B5 /* SocialMediaImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EBBB71ECD2D7500B037B5 /* SocialMediaImageCell.swift */; };
 		8D1EBBBA1ECD2D7500B037B5 /* SocialMediaImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1EBBB81ECD2D7500B037B5 /* SocialMediaImageCell.xib */; };
 		8D1EBBBE1ECD331E00B037B5 /* SocialMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EBBBD1ECD331E00B037B5 /* SocialMediaCell.swift */; };
+		8D1EBBC01ECD4DD400B037B5 /* String+DisplayHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EBBBF1ECD4DD400B037B5 /* String+DisplayHeight.swift */; };
 		8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E8831ECB4B0400775638 /* AppDelegate.swift */; };
 		8D85E88B1ECB4B0400775638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E88A1ECB4B0400775638 /* Assets.xcassets */; };
 		8D85E88E1ECB4B0400775638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E88C1ECB4B0400775638 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 		8D1EBBB71ECD2D7500B037B5 /* SocialMediaImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaImageCell.swift; sourceTree = "<group>"; };
 		8D1EBBB81ECD2D7500B037B5 /* SocialMediaImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialMediaImageCell.xib; sourceTree = "<group>"; };
 		8D1EBBBD1ECD331E00B037B5 /* SocialMediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaCell.swift; sourceTree = "<group>"; };
+		8D1EBBBF1ECD4DD400B037B5 /* String+DisplayHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+DisplayHeight.swift"; sourceTree = "<group>"; };
 		8D85E8801ECB4B0400775638 /* SmoothScrollingSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmoothScrollingSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D85E8831ECB4B0400775638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D85E88A1ECB4B0400775638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		8D85E8A01ECB593E00775638 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8D1EBBBF1ECD4DD400B037B5 /* String+DisplayHeight.swift */,
 				8D85E8A11ECB596400775638 /* UIViewController+Logger.swift */,
 				8D85E8A81ECB5FB000775638 /* UITableViewCell+Nib.swift */,
 			);
@@ -258,6 +261,7 @@
 				8D1EBBB91ECD2D7500B037B5 /* SocialMediaImageCell.swift in Sources */,
 				8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */,
 				8D85E8A61ECB5C6800775638 /* SimpleTableViewCell.swift in Sources */,
+				8D1EBBC01ECD4DD400B037B5 /* String+DisplayHeight.swift in Sources */,
 				8D19387B1ECCA4E3007E3C41 /* SocialMediaTextCell.swift in Sources */,
 				8D85E89A1ECB4C8200775638 /* MenuViewController.swift in Sources */,
 				8D19387F1ECCA99A007E3C41 /* SocialMediaTimelineItem.swift in Sources */,
