@@ -91,15 +91,7 @@ extension SocialMediaTimelineViewController: UITableViewDataSource {
 		let viewModel = viewModels[indexPath.row]
 		let cellIdentifier = viewModel.contentType == .textOnly ? SocialMediaTextCell.identifier : SocialMediaImageCell.identifier
 		
-		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-		
-		guard let socialMediaCell = cell as? SocialMediaCell else {
-			return cell
-		}		
-		
-		socialMediaCell.configure(viewModel: viewModel)
-		
-		return cell
+		return tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
 	}
 			
 }
@@ -121,7 +113,15 @@ extension SocialMediaTimelineViewController: UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		
 		self.log(function: #function, additionalInfo: "with indexPath: \(indexPath)")
+		
+		let viewModel = viewModels[indexPath.row]
+		guard let socialMediaCell = cell as? SocialMediaCell else {
+			return
+		}
+		
+		socialMediaCell.configure(viewModel: viewModel)
 	}
 	
 	func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
