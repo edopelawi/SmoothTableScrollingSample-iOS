@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SocialMediaImageCell: UITableViewCell {
+final class SocialMediaImageCell: UITableViewCell, SocialMediaCell {
 
 	static let identifier = "SocialMediaImageCell"
 	

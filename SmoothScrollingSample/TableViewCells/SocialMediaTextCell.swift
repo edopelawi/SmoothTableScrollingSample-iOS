@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SocialMediaTextCell: UITableViewCell {
+final class SocialMediaTextCell: UITableViewCell, SocialMediaCell {
 
 	static let identifier = "SocialMediaTextCell"
 	
