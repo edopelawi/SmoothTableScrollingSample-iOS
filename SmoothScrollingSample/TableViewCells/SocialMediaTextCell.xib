@@ -55,12 +55,22 @@
                             <constraint firstItem="s5R-Li-gO3" firstAttribute="leading" secondItem="qYr-s0-4s3" secondAttribute="trailing" constant="8" id="hg3-iq-0p0"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcu-yA-Jl4" userLabel="Custom Bottom Border View">
+                        <rect key="frame" x="0.0" y="141" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="FX7-VR-1Bz"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="jI8-DM-ohS" secondAttribute="trailing" constant="8" id="5yF-m7-HYX"/>
                     <constraint firstAttribute="bottom" secondItem="jI8-DM-ohS" secondAttribute="bottom" id="7sc-FD-T1E"/>
+                    <constraint firstItem="Dcu-yA-Jl4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9O2-q4-duJ"/>
+                    <constraint firstAttribute="bottom" secondItem="Dcu-yA-Jl4" secondAttribute="bottom" id="aqT-eR-bRI"/>
                     <constraint firstItem="jI8-DM-ohS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eyB-6T-BON"/>
+                    <constraint firstAttribute="trailing" secondItem="Dcu-yA-Jl4" secondAttribute="trailing" id="faV-CC-LmG"/>
                     <constraint firstItem="jI8-DM-ohS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="m8C-dl-wDj"/>
                 </constraints>
             </tableViewCellContentView>
