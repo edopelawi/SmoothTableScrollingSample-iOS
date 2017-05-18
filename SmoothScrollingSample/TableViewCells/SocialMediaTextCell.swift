@@ -18,6 +18,15 @@ final class SocialMediaTextCell: UITableViewCell {
 	
 	fileprivate var viewModel: SocialMediaCellViewModel?
 	
+	override func prepareForReuse() {
+		super.prepareForReuse()
+		
+		let className = String(describing: type(of: self))
+		Logger.shared.log("\(className): \(#function)")
+		
+		resetState()
+	}
+	
 	fileprivate func fetchUserAvatar() {
 		
 		if let validAvatar = viewModel?.userAvatar {
@@ -31,7 +40,16 @@ final class SocialMediaTextCell: UITableViewCell {
 			}
 		}
 	}
-    
+	
+	private func resetState() {
+		
+		viewModel = nil
+		
+		avatarImageView.image = nil
+		
+		nameLabel.text = ""
+		contentLabel.text = ""
+	}
 }
 
 extension SocialMediaTextCell: SocialMediaCell {

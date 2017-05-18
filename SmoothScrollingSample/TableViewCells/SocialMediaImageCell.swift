@@ -19,9 +19,18 @@ final class SocialMediaImageCell: UITableViewCell {
 	@IBOutlet fileprivate weak var contentImageView: UIImageView!
 	
 	fileprivate var viewModel: SocialMediaCellViewModel?
+
+	override func prepareForReuse() {
+		super.prepareForReuse()
+		
+		let className = String(describing: type(of: self))
+		Logger.shared.log("\(className): \(#function)")
+		
+		resetState()
+	}
 	
 	fileprivate func fetchUserAvatar() {
-		
+	
 		if let validAvatar = viewModel?.userAvatar {
 			avatarImageView.image = validAvatar
 			return
@@ -48,6 +57,16 @@ final class SocialMediaImageCell: UITableViewCell {
 		}
 	}
 	
+	private func resetState() {
+
+		viewModel = nil
+		
+		avatarImageView.image = nil
+		contentImageView.image = nil
+		
+		nameLabel.text = ""
+		contentLabel.text = ""
+	}
 }
 
 extension SocialMediaImageCell: SocialMediaCell {
