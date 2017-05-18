@@ -25,8 +25,6 @@ final class SocialMediaTimelineItemFactory {
 	
 	private func generateItems() {
 		
-		// TODO: Pass avatar URLs later.
-		
 		let users: [SocialMediaUser] = [
 			SocialMediaUser(
 				name: "Nick Fury",
@@ -76,13 +74,22 @@ final class SocialMediaTimelineItemFactory {
 			"You and I remember Budapest very differently."
 		]
 		
+		let imageURLs: [URL?] = [
+			URL(string: "https://www.seeklogo.net/wp-content/uploads/2016/07/avengers-logo.png"),
+			nil,
+			nil,
+			nil,
+			URL(string: "http://garenglazier.com/wp-content/uploads/2015/05/Hulk-Smash.jpg"),
+			nil,
+			nil
+		]
+		
 		let timelineItems = users.enumerated().map { (index: Int, user: SocialMediaUser) -> SocialMediaTimelineItem in
 			
-			// TODO: Add image URLs later.
 			return SocialMediaTimelineItem(
 				user: user,
 				text: texts[index],
-				imageURL: nil
+				imageURL: imageURLs[index]
 			)
 		}
 		
