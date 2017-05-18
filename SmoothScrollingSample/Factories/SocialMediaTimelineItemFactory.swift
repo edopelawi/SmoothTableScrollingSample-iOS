@@ -65,7 +65,7 @@ final class SocialMediaTimelineItemFactory {
 			
 			"We have a Hulk.",
 			
-			"I understod that reference.",
+			"I understood that reference.",
 			
 			"Have care of how you speak. Loki is beyond reason but he is of Asgard. And he is my brother.\n\n\n\n\n...He's adopted.",
 			
@@ -86,7 +86,7 @@ final class SocialMediaTimelineItemFactory {
 			)
 		}
 		
-		let repeatedTimelineItems: [[SocialMediaTimelineItem]] = Array(repeating: timelineItems, count: 100)
+		let repeatedTimelineItems: [[SocialMediaTimelineItem]] = Array(repeating: timelineItems, count: 5)
 		
 		self.items = repeatedTimelineItems.flatMap { $0 }
 	}
