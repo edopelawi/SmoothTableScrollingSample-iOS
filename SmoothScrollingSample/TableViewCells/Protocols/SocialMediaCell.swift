@@ -8,6 +8,10 @@
 
 import UIKit
 
-protocol SocialMediaCell {	
+protocol SocialMediaCell {
+	
+	
+	static func height(for viewModel: SocialMediaCellViewModel) -> CGFloat
+	
 	func configure(viewModel: SocialMediaCellViewModel)
 }
