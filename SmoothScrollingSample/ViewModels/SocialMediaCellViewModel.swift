@@ -53,9 +53,10 @@ final class SocialMediaCellViewModel {
 			return
 		}
 		
-		// TODO: Replace this with asynchronous method for better performance later.
-		userAvatar = getImage(for: item.user.avatarURL)
-		completion(userAvatar)
+		fetchImage(for: item.user.avatarURL) { [weak self] (image: UIImage?) in
+			self?.userAvatar = image
+			completion(image)
+		}
 	}
 	
 	/// Fetchs content image from server. Will update this instance's `contentImage` and execute `completion` with retrieved `UIImage?`.
@@ -64,11 +65,12 @@ final class SocialMediaCellViewModel {
 		if let validImage = contentImage {
 			completion(validImage)
 			return
-		}
+		}		
 		
-		// TODO: Replace this with asynchronous method for better performance later.
-		contentImage = getImage(for: item.imageURL)
-		completion(contentImage)
+		fetchImage(for: item.imageURL) { [weak self] (image: UIImage?) in
+			self?.contentImage = image
+			completion(image)
+		}
 	}
 	
 	func stopAllFetchTasks() {

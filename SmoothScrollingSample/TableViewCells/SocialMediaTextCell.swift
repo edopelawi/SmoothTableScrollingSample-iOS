@@ -36,7 +36,9 @@ final class SocialMediaTextCell: UITableViewCell, SocialMediaCell {
 		}
 		
 		viewModel?.fetchUserAvatar { [weak self] (userAvatar: UIImage?) in
-			self?.avatarImageView.image = userAvatar
+			DispatchQueue.main.async {
+				self?.avatarImageView.image = userAvatar
+			}
 		}
 	}
     
