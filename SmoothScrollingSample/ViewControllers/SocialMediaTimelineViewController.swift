@@ -119,5 +119,13 @@ extension SocialMediaTimelineViewController: UITableViewDelegate {
 		
 		return UITableViewAutomaticDimension
 	}
+	
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		self.log(function: #function, additionalInfo: "with indexPath: \(indexPath)")
+	}
+	
+	func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		self.log(function: #function, additionalInfo: "with indexPath: \(indexPath)")	
+	}
+	
 }
-
