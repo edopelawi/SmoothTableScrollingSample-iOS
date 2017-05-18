@@ -16,6 +16,9 @@
 		8D1938841ECCC383007E3C41 /* SocialMediaCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1938831ECCC383007E3C41 /* SocialMediaCellViewModel.swift */; };
 		8D1938871ECCC5F4007E3C41 /* SocialMediaTimelineItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1938861ECCC5F4007E3C41 /* SocialMediaTimelineItemFactory.swift */; };
 		8D1EBBB41ECD246300B037B5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EBBB31ECD246300B037B5 /* BaseViewController.swift */; };
+		8D1EBBB91ECD2D7500B037B5 /* SocialMediaImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EBBB71ECD2D7500B037B5 /* SocialMediaImageCell.swift */; };
+		8D1EBBBA1ECD2D7500B037B5 /* SocialMediaImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1EBBB81ECD2D7500B037B5 /* SocialMediaImageCell.xib */; };
+		8D1EBBBE1ECD331E00B037B5 /* SocialMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EBBBD1ECD331E00B037B5 /* SocialMediaCell.swift */; };
 		8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E8831ECB4B0400775638 /* AppDelegate.swift */; };
 		8D85E88B1ECB4B0400775638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E88A1ECB4B0400775638 /* Assets.xcassets */; };
 		8D85E88E1ECB4B0400775638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D85E88C1ECB4B0400775638 /* LaunchScreen.storyboard */; };
@@ -39,6 +42,9 @@
 		8D1938831ECCC383007E3C41 /* SocialMediaCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaCellViewModel.swift; sourceTree = "<group>"; };
 		8D1938861ECCC5F4007E3C41 /* SocialMediaTimelineItemFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaTimelineItemFactory.swift; sourceTree = "<group>"; };
 		8D1EBBB31ECD246300B037B5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8D1EBBB71ECD2D7500B037B5 /* SocialMediaImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaImageCell.swift; sourceTree = "<group>"; };
+		8D1EBBB81ECD2D7500B037B5 /* SocialMediaImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialMediaImageCell.xib; sourceTree = "<group>"; };
+		8D1EBBBD1ECD331E00B037B5 /* SocialMediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaCell.swift; sourceTree = "<group>"; };
 		8D85E8801ECB4B0400775638 /* SmoothScrollingSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmoothScrollingSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D85E8831ECB4B0400775638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D85E88A1ECB4B0400775638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +94,14 @@
 				8D1938861ECCC5F4007E3C41 /* SocialMediaTimelineItemFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		8D1EBBBC1ECD330900B037B5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8D1EBBBD1ECD331E00B037B5 /* SocialMediaCell.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8D85E8771ECB4B0400775638 = {
@@ -149,10 +163,13 @@
 		8D85E8A31ECB5C4400775638 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				8D1EBBBC1ECD330900B037B5 /* Protocols */,
 				8D85E8A41ECB5C6800775638 /* SimpleTableViewCell.swift */,
 				8D85E8A51ECB5C6800775638 /* SimpleTableViewCell.xib */,
 				8D1938791ECCA4E3007E3C41 /* SocialMediaTextCell.swift */,
 				8D19387A1ECCA4E3007E3C41 /* SocialMediaTextCell.xib */,
+				8D1EBBB71ECD2D7500B037B5 /* SocialMediaImageCell.swift */,
+				8D1EBBB81ECD2D7500B037B5 /* SocialMediaImageCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -224,6 +241,7 @@
 				8D85E89B1ECB4C8200775638 /* MenuViewController.xib in Resources */,
 				8D85E88B1ECB4B0400775638 /* Assets.xcassets in Resources */,
 				8D85E89F1ECB513E00775638 /* SimpleTableViewController.xib in Resources */,
+				8D1EBBBA1ECD2D7500B037B5 /* SocialMediaImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +255,7 @@
 				8D1EBBB41ECD246300B037B5 /* BaseViewController.swift in Sources */,
 				8D85E8A21ECB596400775638 /* UIViewController+Logger.swift in Sources */,
 				8D85E89E1ECB513E00775638 /* SimpleTableViewController.swift in Sources */,
+				8D1EBBB91ECD2D7500B037B5 /* SocialMediaImageCell.swift in Sources */,
 				8D85E8841ECB4B0400775638 /* AppDelegate.swift in Sources */,
 				8D85E8A61ECB5C6800775638 /* SimpleTableViewCell.swift in Sources */,
 				8D19387B1ECCA4E3007E3C41 /* SocialMediaTextCell.swift in Sources */,
@@ -245,6 +264,7 @@
 				8D85E8A91ECB5FB000775638 /* UITableViewCell+Nib.swift in Sources */,
 				8D1938871ECCC5F4007E3C41 /* SocialMediaTimelineItemFactory.swift in Sources */,
 				8D1938811ECCAA09007E3C41 /* SocialMediaUser.swift in Sources */,
+				8D1EBBBE1ECD331E00B037B5 /* SocialMediaCell.swift in Sources */,
 				8D1938841ECCC383007E3C41 /* SocialMediaCellViewModel.swift in Sources */,
 				8D1938771ECC9F28007E3C41 /* SocialMediaTimelineViewController.swift in Sources */,
 			);

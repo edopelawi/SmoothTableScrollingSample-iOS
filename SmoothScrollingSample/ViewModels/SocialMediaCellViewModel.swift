@@ -10,7 +10,22 @@ import UIKit
 
 final class SocialMediaCellViewModel {		
 	
+	enum ContentType {
+		case textOnly
+		case textAndImage
+	}
+	
+	var contentType: ContentType {
+		
+		if let _ = item.imageURL {
+			return .textAndImage
+		} else {
+			return .textOnly
+		}
+	}
+	
 	var userAvatar: UIImage?
+	var contentImage: UIImage?
 	
 	var userName: String {
 		return item.user.name
@@ -20,7 +35,6 @@ final class SocialMediaCellViewModel {
 		return item.text
 	}
 	
-	var contentImage: UIImage?
 	
 	fileprivate let item: SocialMediaTimelineItem
 	fileprivate var ongoingDataTasks = [String: URLSessionDataTask]()

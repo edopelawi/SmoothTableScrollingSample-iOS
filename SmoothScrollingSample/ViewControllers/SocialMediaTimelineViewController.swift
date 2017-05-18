@@ -19,6 +19,7 @@ final class SocialMediaTimelineViewController: BaseViewController {
 
         title = "Social Media"
 		
+		createRightBarButton()
 		configureTableView()
 		loadViewModels()
     }
@@ -31,9 +32,27 @@ final class SocialMediaTimelineViewController: BaseViewController {
 	
 	// MARK: - Private methods
 	
+	private func createRightBarButton() {
+		
+		self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+			title: "Top!",
+			style: .plain,
+			target: self,
+			action: #selector(SocialMediaTimelineViewController.scrollToTop)
+		)
+	}
+	
+	@objc private func scrollToTop() {
+
+		let topIndexPath = IndexPath(row: 0, section: 0)
+		tableView.scrollToRow(at: topIndexPath, at: .top, animated: true)
+	}
+	
 	private func configureTableView() {
 		
 		tableView.register(SocialMediaTextCell.nib(), forCellReuseIdentifier: SocialMediaTextCell.identifier)
+		
+		tableView.register(SocialMediaImageCell.nib(), forCellReuseIdentifier: SocialMediaImageCell.identifier)
 	}
 	
 	private func loadViewModels() {
@@ -69,16 +88,18 @@ extension SocialMediaTimelineViewController: UITableViewDataSource {
 		
 		self.log(function: #function, additionalInfo: "with indexPath: \(indexPath)")
 		
-		let cell = tableView.dequeueReusableCell(withIdentifier: SocialMediaTextCell.identifier, for: indexPath)
-		
-		guard let textCell = cell as? SocialMediaTextCell else {
-			return cell
-		}
-		
 		let viewModel = viewModels[indexPath.row]
-		textCell.configure(viewModel: viewModel)
+		let cellIdentifier = viewModel.contentType == .textOnly ? SocialMediaTextCell.identifier : SocialMediaImageCell.identifier
 		
-		return textCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+		
+		guard let socialMediaCell = cell as? SocialMediaCell else {
+			return cell
+		}		
+		
+		socialMediaCell.configure(viewModel: viewModel)
+		
+		return cell
 	}
 			
 }

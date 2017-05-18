@@ -1,20 +1,22 @@
 //
-//  SocialMediaTextCell.swift
+//  SocialMediaImageCell.swift
 //  SmoothScrollingSample
 //
-//  Created by Ricardo Pramana Suranta on 5/17/17.
+//  Created by Ricardo Pramana Suranta on 5/18/17.
 //  Copyright © 2017 Ricardo Pramana Suranta. All rights reserved.
 //
 
 import UIKit
 
-final class SocialMediaTextCell: UITableViewCell, SocialMediaCell {
+final class SocialMediaImageCell: UITableViewCell, SocialMediaCell {
 
-	static let identifier = "SocialMediaTextCell"
+	static let identifier = "SocialMediaImageCell"
 	
 	@IBOutlet fileprivate weak var avatarImageView: UIImageView!
 	@IBOutlet fileprivate weak var nameLabel: UILabel!
+	
 	@IBOutlet fileprivate weak var contentLabel: UILabel!
+	@IBOutlet fileprivate weak var contentImageView: UIImageView!
 	
 	fileprivate var viewModel: SocialMediaCellViewModel?
 	
@@ -26,6 +28,7 @@ final class SocialMediaTextCell: UITableViewCell, SocialMediaCell {
 		contentLabel.text = viewModel.contentText
 		
 		fetchUserAvatar()
+		fetchContentImage()
 	}
 	
 	func fetchUserAvatar() {
@@ -39,5 +42,17 @@ final class SocialMediaTextCell: UITableViewCell, SocialMediaCell {
 			self?.avatarImageView.image = userAvatar
 		}
 	}
-    
+	
+	func fetchContentImage() {
+		
+		if let validImage = viewModel?.contentImage {
+			contentImageView.image = validImage
+			return
+		}
+		
+		viewModel?.fetchContentImage() { [weak self] (contentImage: UIImage?) in
+			self?.contentImageView.image = contentImage
+		}
+	}
+	
 }

@@ -30,13 +30,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5R-Li-gO3" userLabel="Name Label">
-                                <rect key="frame" x="48" y="16" width="248" height="20.5"/>
+                                <rect key="frame" x="48" y="16" width="256" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-Ab-dZw" userLabel="Content Label">
-                                <rect key="frame" x="48" y="44" width="248" height="89.5"/>
+                                <rect key="frame" x="48" y="44" width="256" height="89.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                             <constraint firstAttribute="bottom" secondItem="oe5-Ab-dZw" secondAttribute="bottom" constant="8" id="P4M-d1-ATK"/>
                             <constraint firstItem="oe5-Ab-dZw" firstAttribute="trailing" secondItem="s5R-Li-gO3" secondAttribute="trailing" id="ZwU-NX-QS1"/>
                             <constraint firstAttribute="leading" secondItem="qYr-s0-4s3" secondAttribute="leading" id="e7x-Wg-DJI"/>
-                            <constraint firstAttribute="trailing" secondItem="s5R-Li-gO3" secondAttribute="trailing" constant="8" id="hUa-5Y-szM"/>
+                            <constraint firstAttribute="trailing" secondItem="s5R-Li-gO3" secondAttribute="trailing" id="hUa-5Y-szM"/>
                             <constraint firstItem="s5R-Li-gO3" firstAttribute="leading" secondItem="qYr-s0-4s3" secondAttribute="trailing" constant="8" id="hg3-iq-0p0"/>
                         </constraints>
                     </view>
