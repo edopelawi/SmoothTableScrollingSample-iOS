@@ -56,6 +56,18 @@ final class SocialMediaCellViewModel {
 		completion(userAvatar)
 	}
 	
+	func stopAllFetchTasks() {
+		
+		DispatchQueue.main.async { [weak self] in
+			
+			self?.ongoingDataTasks.forEach { (_, task: URLSessionDataTask) in
+				task.cancel()
+			}
+			
+			self?.ongoingDataTasks = [:]
+		}
+	}
+	
 	// MARK: - Private methods
 	
 	/// Synchronous method to retrieve image from URL.
